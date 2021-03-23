@@ -1,0 +1,53 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.propertymanagement.ui.landlord.LandLordViewModel" />
+
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/tv_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LandLord "
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/tv_pl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_ll"
+            android:text=" Property List"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_landLord"
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:layout_below="@+id/tv_pl"
+            android:layout_marginTop="20dp" />
+
+        <Button
+            android:id="@+id/button_addProp"
+            android:onClick="@{viewModel.}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/recycler_view_landLord"
+            android:text="Add Property" />
+
+
+    </RelativeLayout>
+
+</layout>
