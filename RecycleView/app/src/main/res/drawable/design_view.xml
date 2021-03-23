@@ -1,0 +1,11 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#e42828" />
+    <stroke
+        android:width="5dp"
+        android:color="#3b91d7" />
+    <!-- Set the same value for both width and height to get a circular shape -->
+    <size
+        android:width="200dp"
+        android:height="50dp" />
+</shape>
