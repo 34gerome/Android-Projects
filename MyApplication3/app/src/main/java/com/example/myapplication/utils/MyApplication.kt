@@ -5,6 +5,9 @@ import com.example.myapplication.di.AppModule
 import com.example.myapplication.di.DaggerSuperHeroComponent
 import com.example.myapplication.di.SuperHeroComponent
 
+//remember to include this in manifest
+//android:name=".utils.MyApplication"
+
 class MyApplication: Application() {
     lateinit var component: SuperHeroComponent
 

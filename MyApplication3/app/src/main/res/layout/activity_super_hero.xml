@@ -1,26 +1,157 @@
 <layout>
 
     <data>
+
         <variable
             name="heroInfo"
             type="com.example.myapplication.data.model.SuperHero" />
-        
+
     </data>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp"
-    tools:context=".ui.main.view.SuperHeroActivity">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView_hero_info"
-        android:src="@drawable/ic_launcher_background"
-        android:layout_centerHorizontal="true"/>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        tools:context=".ui.main.view.SuperHeroActivity">
 
-</RelativeLayout>
+        <ImageView
+            android:id="@+id/imageView_hero_info"
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_launcher_background"
+            app:bindingImage="@{heroInfo.image.url}" />
+
+        <TextView
+            android:id="@+id/tv_name2"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/imageView_hero_info"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:hint="Black Flash"
+            android:text="@{heroInfo.name}"
+            android:textColorHint="@color/black" />
+
+        <TextView
+            android:id="@+id/stats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name2"
+            android:layout_marginTop="12dp"
+            android:text="Super Hero Stats" />
+
+        <TextView
+            android:id="@+id/Combat_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/stats"
+            android:layout_marginTop="12dp"
+            android:text="Combat: " />
+
+        <TextView
+            android:id="@+id/combat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/stats"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/Combat_name"
+            android:hint="Combat"
+            android:text="@{heroInfo.powerstats.combat }" />
+
+        <TextView
+            android:id="@+id/durability"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/combat"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/durability_name"
+            android:hint="Durability"
+            android:text="@{heroInfo.powerstats.durability}" />
+
+        <TextView
+            android:id="@+id/durability_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/combat"
+            android:layout_marginTop="12dp"
+            android:text="Durability: " />
+
+        <TextView
+            android:id="@+id/intelligence"
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@+id/intelligence_name"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/durability"
+            android:layout_marginTop="12dp"
+            android:hint="intelligence"
+            android:text="@{heroInfo.powerstats.intelligence}" />
+        <TextView
+            android:id="@+id/intelligence_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/durability"
+            android:layout_marginTop="12dp"
+            android:hint="intelligence"
+            android:text="Intelligence: " />
+
+        <TextView
+            android:id="@+id/power"
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@+id/power_name"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/intelligence"
+            android:layout_marginTop="12dp"
+            android:hint="power"
+            android:text="@{heroInfo.powerstats.power}" />
+        <TextView
+            android:id="@+id/power_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/intelligence"
+            android:layout_marginTop="12dp"
+            android:hint="power"
+            android:text="Power: " />
+
+        <TextView
+            android:id="@+id/speed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/speed_name"
+            android:layout_below="@+id/power"
+            android:layout_marginTop="12dp"
+            android:hint="speed"
+            android:text="@{heroInfo.powerstats.speed}" />
+        <TextView
+            android:id="@+id/speed_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/power"
+            android:layout_marginTop="12dp"
+            android:hint="speed"
+            android:text="Speed: " />
+
+        <TextView
+            android:id="@+id/strength"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/strength_name"
+            android:layout_below="@+id/speed"
+            android:layout_marginTop="12dp"
+            android:hint="strength"
+            android:text="@{heroInfo.powerstats.strength}" />
+        <TextView
+            android:id="@+id/strength_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/speed"
+            android:layout_marginTop="12dp"
+            android:hint="strength"
+            android:text="Strength: " />
+
+
+    </RelativeLayout>
 
 </layout>

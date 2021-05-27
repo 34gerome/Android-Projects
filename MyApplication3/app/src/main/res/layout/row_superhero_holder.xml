@@ -1,16 +1,16 @@
-<layout>
-
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <variable
             name="sup_hero"
-            type="com.example.myapplication.data.model.Result" />
+            type="com.example.myapplication.data.model.SuperHero" />
     </data>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="10dp"
+        android:id="@+id/root_layout"
         android:weightSum="3">
 
         <TextView
@@ -33,6 +33,7 @@
 
         <ImageView
             android:id="@+id/iv_image"
+            app:bindingImage="@{sup_hero.image.url}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

@@ -7,4 +7,5 @@ import dagger.Component
 interface SuperHeroComponent {
 
     fun inject(mainActivity: MainActivity)
+
 }
